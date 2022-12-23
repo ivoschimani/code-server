@@ -1,10 +1,10 @@
 FROM linuxserver/code-server:latest
 
-MAINTAINER Ivo Schimani <ivo@schimani.de>
+LABEL org.opencontainers.image.authors="ivo@schimani.de"
 
-RUN apt-get update && apt-get install -y software-properties-common && add-apt-repository ppa:ondrej/php
+RUN apt update && apt install -y software-properties-common && add-apt-repository ppa:ondrej/php
 
-RUN apt-get update && apt-get install -y php7.3-cli php7.3-mysql php7.3-sqlite3 php7.3-intl php7.3-mbstring php7.3-curl php7.3-xml php7.3-gd php7.3-zip php7.3-dom unzip
+RUN apt update && apt install -y php php-cli php-mysql php-sqlite3 php-intl php-mbstring php-curl php-xml php-gd php-imagick php-zip unzip
 
 RUN set -ex \
   && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
