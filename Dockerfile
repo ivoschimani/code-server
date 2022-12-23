@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="ivo@schimani.de"
 
 RUN apt update && apt install -y software-properties-common && add-apt-repository ppa:ondrej/php
 
-RUN apt update && apt install -y php8.1 php8.1-cli php8.1-mysql php8.1-sqlite3 php8.1-intl php8.1-mbstring php8.1-curl php8.1-xml php8.1-gd php8.1-imagick php8.1-zip unzip
+RUN apt update && apt install -y php8.0 php8.0-cli php8.0-mysql php8.0-sqlite3 php8.0-intl php8.0-mbstring php8.0-curl php8.0-xml php8.0-gd php8.0-imagick php8.0-zip unzip
 
 RUN set -ex \
   && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
